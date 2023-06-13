@@ -43,7 +43,7 @@ class PhotoController extends Controller
         $photo->file_url = $request->input('file_url');
         $photo->hashtags = $request->input('hashtags');
         $photo->publication_date = $request->input('publication_date');
-        $photo->likes = $request->input('likes', 0); // Значення за замовчуванням - 0
+        $photo->likes = $request->input('likes', 0); 
         $photo->save();
 
         return response()->json(['message' => 'Фотографія успішно додана'], 201);
